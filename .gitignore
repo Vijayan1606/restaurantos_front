@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.env
+server/uploads/invoices/*
+!server/uploads/invoices/.gitkeep
+*.log
+.DS_Store

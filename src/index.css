@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #fdba74 transparent;
+}
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-thumb { background: #fdba74; border-radius: 999px; }
+*::-webkit-scrollbar-track { background: transparent; }
+
+html, body, #root { height: 100%; }
+
+body {
+  @apply bg-gradient-to-br from-orange-50 via-white to-amber-50 text-gray-900 font-sans antialiased;
+  background-attachment: fixed;
+}
+
+/* ---------- Cards ---------- */
+.card {
+  @apply relative bg-white/80 backdrop-blur-sm rounded-2xl shadow-card border border-orange-100/60
+    p-5 transition-all duration-300 hover:shadow-glow-lg hover:-translate-y-0.5;
+}
+
+.card-flat {
+  @apply bg-white rounded-2xl border border-gray-100 p-5 shadow-soft;
+}
+
+.glass {
+  @apply bg-white/60 backdrop-blur-md border border-white/40;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  @apply inline-flex items-center justify-center gap-1.5 rounded-xl px-4 py-2.5 text-sm font-semibold
+    transition-all duration-200 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+.btn-primary {
+  @apply btn text-white bg-gradient-to-r from-brand-600 to-brand-500 bg-[length:200%_auto]
+    shadow-md hover:shadow-glow-lg hover:bg-right;
+  transition: background-position 0.5s ease, box-shadow 0.2s ease, transform 0.1s ease;
+}
+.btn-secondary {
+  @apply btn bg-gray-100 text-gray-700 hover:bg-gray-200 hover:shadow-soft;
+}
+.btn-ghost {
+  @apply btn bg-transparent text-brand-700 hover:bg-brand-50;
+}
+.btn-danger {
+  @apply btn bg-red-50 text-red-600 hover:bg-red-100;
+}
+.btn-icon {
+  @apply inline-flex items-center justify-center rounded-lg p-2 transition-all duration-200
+    hover:bg-brand-50 hover:text-brand-700 active:scale-90;
+}
+
+/* ---------- Inputs ---------- */
+.input {
+  @apply w-full rounded-xl border border-gray-200 bg-white/70 px-3.5 py-2.5 text-sm
+    transition-all duration-200 placeholder:text-gray-400
+    focus:outline-none focus:ring-4 focus:ring-brand-100 focus:border-brand-400;
+}
+.select {
+  @apply input appearance-none bg-no-repeat pr-9 cursor-pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23ea580c'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+  background-position: right 0.65rem center;
+  background-size: 1.1em;
+}
+
+/* ---------- Badges ---------- */
+.badge {
+  @apply inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-semibold capitalize;
+}
+
+/* ---------- Tables ---------- */
+table.data-table { @apply w-full border-separate border-spacing-0; }
+table.data-table thead th {
+  @apply text-left text-[11px] font-bold text-brand-700/80 uppercase tracking-wider py-2.5 px-3
+    bg-brand-50/60 sticky top-0 first:rounded-l-lg last:rounded-r-lg;
+}
+table.data-table tbody tr {
+  @apply transition-colors duration-150 hover:bg-brand-50/40;
+}
+table.data-table td {
+  @apply py-2.5 px-3 text-sm border-b border-gray-100;
+}
+
+/* ---------- Skeleton loading shimmer ---------- */
+.skeleton {
+  @apply rounded-lg bg-gray-200/70;
+  background-image: linear-gradient(90deg, rgba(255,255,255,0) 0, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%);
+  background-size: 500px 100%;
+  animation: shimmer 1.6s infinite linear;
+}
+
+/* ---------- Misc ---------- */
+.gradient-text {
+  @apply bg-gradient-to-r from-brand-700 via-brand-500 to-amber-500 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient;
+}
+
+.divider-glow {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(234,88,12,0.3), transparent);
+}

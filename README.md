@@ -81,6 +81,8 @@ backend API to be running at `http://localhost:5000` (see `server/README.md`) â€
 frontend code just calls relative paths like `api.get('/orders')` and never needs
 to know the backend's actual host during development.
 
+Deploy Link: https://restaurantos-front.vercel.app/
+
 ```bash
 npm run build     # production build â†’ dist/
 npm run preview   # serve the production build locally to sanity-check it

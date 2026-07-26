@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const api = axios.create({ baseURL: "https://restaurantos-back.onrender.com" });
+const api = axios.create({ baseURL: "https://restaurantos-back.onrender.com/api" });
 
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem("ros_token");

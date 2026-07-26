@@ -10,7 +10,7 @@ export function AuthProvider({ children }) {
   });
 
   async function login(email, password) {
-    const { data } = await api.post("/api/auth/login", { email, password });
+    const { data } = await api.post("/auth/login", { email, password });
     localStorage.setItem("ros_token", data.token);
     localStorage.setItem("ros_user", JSON.stringify(data.user));
     setUser(data.user);

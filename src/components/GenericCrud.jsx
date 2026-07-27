@@ -105,7 +105,7 @@ export default function GenericCrud({ title, endpoint, fields, icon: Icon }) {
         <div className="relative">
           <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
           <input
-            className="input pl-8 py-1.5 text-sm w-48"
+            className="input !pl-12 py-1.5 text-sm w-48"
             placeholder="Search..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}

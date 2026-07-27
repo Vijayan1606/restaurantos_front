@@ -74,14 +74,14 @@ export default function Login() {
             <label className="text-xs font-medium text-gray-500">Email</label>
             <div className="relative mt-1">
               <Mail size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-              <input className="input pl-9" value={email} onChange={(e) => setEmail(e.target.value)} />
+              <input className="input !pl-10" value={email} onChange={(e) => setEmail(e.target.value)} />
             </div>
           </div>
           <div>
             <label className="text-xs font-medium text-gray-500">Password</label>
             <div className="relative mt-1">
               <Lock size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-              <input type="password" className="input pl-9" value={password} onChange={(e) => setPassword(e.target.value)} />
+              <input type="password" className="input !pl-10" value={password} onChange={(e) => setPassword(e.target.value)} />
             </div>
           </div>
           <motion.button whileTap={{ scale: 0.97 }} disabled={busy} className="btn-primary w-full">

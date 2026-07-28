@@ -104,7 +104,7 @@ export default function Invoices() {
             <UploadCloud size={26} className="text-brand-600" />
           </motion.div>
           <h3 className="font-semibold mb-1">Upload Supplier Invoices</h3>
-          <p className="text-xs text-gray-400 mb-4">Drag & drop or click below — supports printed and handwritten invoices (PDF, JPG, PNG, WEBP)</p>
+          <p className="text-xs text-gray-400 mb-4">Drag & drop or click below — supports printed and handwritten invoices (JPG, PNG, WEBP)</p>
           <label className="btn-secondary cursor-pointer">
             Choose Files
             <input

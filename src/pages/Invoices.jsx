@@ -110,7 +110,7 @@ export default function Invoices() {
             <input
               type="file"
               multiple
-              accept=".pdf,.jpg,.jpeg,.png,.webp"
+              accept=".jpg,.jpeg,.png,.webp"
               className="hidden"
               onChange={(e) => uploadFiles(Array.from(e.target.files))}
             />
